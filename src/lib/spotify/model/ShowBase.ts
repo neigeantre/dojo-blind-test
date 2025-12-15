@@ -1,15 +1,18 @@
+import { CopyrightObject } from "./CopyrightObject";
+import { ImageObject } from "./ImageObject";
+
 export type ShowBase = {
-	available_markets: ;
-	copyrights: ;
+	available_markets: string[];
+	copyrights: CopyrightObject[];
 	description: string;
 	html_description: string;
 	explicit: boolean;
 	external_urls: ;
 	href: string;
 	id: string;
-	images: ;
+	images: ImageObject[];
 	is_externally_hosted: boolean;
-	languages: ;
+	languages: string[];
 	media_type: string;
 	name: string;
 	publisher: string;

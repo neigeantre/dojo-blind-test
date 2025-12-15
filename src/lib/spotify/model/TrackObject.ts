@@ -1,7 +1,9 @@
+import { ArtistObject } from "./ArtistObject";
+
 export type TrackObject = {
 	album?: ;
-	artists?: ;
-	available_markets?: ;
+	artists?: ArtistObject[];
+	available_markets?: string[];
 	disc_number?: number;
 	duration_ms?: number;
 	explicit?: boolean;

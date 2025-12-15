@@ -3,6 +3,9 @@ import { Tempo } from "./Tempo";
 import { TimeSignature } from "./TimeSignature";
 import { Key } from "./Key";
 import { Mode } from "./Mode";
+import { TimeIntervalObject } from "./TimeIntervalObject";
+import { SectionObject } from "./SectionObject";
+import { SegmentObject } from "./SegmentObject";
 
 export type AudioAnalysisObject = {
 	meta?: {
@@ -42,9 +45,9 @@ export type AudioAnalysisObject = {
 	rhythmstring?: string;
 	rhythm_version?: number;
 };
-	bars?: ;
-	beats?: ;
-	sections?: ;
-	segments?: ;
-	tatums?: ;
+	bars?: TimeIntervalObject[];
+	beats?: TimeIntervalObject[];
+	sections?: SectionObject[];
+	segments?: SegmentObject[];
+	tatums?: TimeIntervalObject[];
 };

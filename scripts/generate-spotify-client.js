@@ -52,6 +52,21 @@ function getGeneratedType(typeSchema, imports) {
     imports.add(typeName)
     return typeName
   }
+
+  if (typeSchema.oneOf != undefined) {
+    const types = typeSchema.oneOf.map((subTypeSchema) => {
+      return getGeneratedType(subTypeSchema, imports)
+    })
+    let generatedCode = "("
+    for (let index = 0; index < types.length - 1; index++) {
+      generatedCode += `${types[index]} | `;
+    }
+    generatedCode += types.at(-1)
+    generatedCode += ")"
+    
+    return generatedCode
+  }
+
   switch (schemaType) {
     case "number":
       return "number"
@@ -62,6 +77,8 @@ function getGeneratedType(typeSchema, imports) {
     case "boolean":
       return "boolean"
     case "array":
+      const typeName = getGeneratedType(typeSchema.items, imports)
+      return `${typeName}[]`
     case "object":
       if (typeSchema.properties != undefined) {
         const requiredFields = typeSchema.required ?? []
