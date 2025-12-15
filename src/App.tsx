@@ -4,8 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import swal from 'sweetalert';
 
-const apiToken =
-  'BQBewu5upiqpbJyov-q7eUh3MuG-nHsDPYMpUnT0DlZyuKzbTjiv4wA-3rufncOfCsBzXfmycogGIdRz-Yx0XGUPCVwBtqd_5yqWjoVFModkWruot---h2AFIADauL8mD9Kk0vIID7cJADPJ-3tpOEu0JG5FD3u8x95_M0kC4eMhIhbjTCOXt5mY99XfMxpXnbU-5EqpM5E5iqHVYesnxDUJE7uxyi6JkiaNtecPf55jNBJ1j9wGsnSjVGzSnbzk7uwjeMWapgzi8LQzffFo5NHdS4y5MG7bNNmkYYzhMrWiwkGQ3sTjsGnGSN78YYsKoFMMiOLUkFDbfeFbJe1Kgd7X5ruHm7g';
+const apiToken = "BQAN1uFSve0uu2cQeeQsuyQl9ywRf4V4BzmIM06Q2k3uOkx3UtYWFhl5enq4n1hZPl806pLJ037ptS2sXsIRhyPqJRTcYHCv5EkM00dFwCT6SXcbGBYLz2ffYhzbsn1eAUlU_a_weEp3IhVMcGJCrFrazEMvYaIYLTkf-lKbg5qpwPgV3oKYnw5L8QvkZpYfrkkM6XxHSTEwTzx0gfTrZzokpMZm7xP0TgrC08-RYFGbT00Ybatw83JGUGE60Zq4yqkgg1AX5M3jXwxGhsF1VnD_7Dpd1-xIJP1hHW7j03iYG1TDx12x6agDdRYdQB2hTmf1Q4V_3CFr4oqZjva2fcHBvbo-XgNGfg2DwEOWiMoLpz4d2Z53677qZ2ODsqw2pSVaJkiPaihh_2yx_UsSSiMdhbkyga8"
 
 const fetchTracks = async () => {
   const response = await fetch('https://api.spotify.com/v1/me/tracks', {

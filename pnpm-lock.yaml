@@ -11,6 +11,9 @@ dependencies:
   axios:
     specifier: ^1.6.2
     version: 1.6.2
+  dotenv:
+    specifier: ^17.2.3
+    version: 17.2.3
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -659,6 +662,11 @@ packages:
   /delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
+    dev: false
+
+  /dotenv@17.2.3:
+    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
+    engines: {node: '>=12'}
     dev: false
 
   /electron-to-chromium@1.4.324:
