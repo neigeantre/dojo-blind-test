@@ -67,6 +67,18 @@ function getGeneratedType(typeSchema, imports) {
     return generatedCode
   }
 
+  if (typeSchema.allOf != undefined) {
+    const types = typeSchema.allOf.map((subTypeSchema) => {
+      return getGeneratedType(subTypeSchema, imports)
+    })
+    let generatedCode = ""
+    for (let index = 0; index < types.length - 1; index++) {
+      generatedCode += `${types[index]} & `;
+    }
+    generatedCode += types.at(-1)
+    
+    return generatedCode  }
+
   switch (schemaType) {
     case "number":
       return "number"
